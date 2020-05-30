@@ -1,0 +1,95 @@
+.gameBox {
+  background: #000;
+  width: 700px;
+  height: 450px;
+  text-align: center;
+  color: #fff;
+}
+
+.gameBox * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.gameBox .rules {
+  padding: 50px;
+  font-size: 25px;
+}
+
+.gameBox .gameBTN {
+  background: #eee;
+  color: #000;
+  text-transform: none;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 30px;
+  height: 50px;
+  padding: initial;
+  font-weight: 600;
+}
+
+.gameBox.withGame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: none;
+  vertical-align: middle;
+  padding: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gameBox.withGame .tttBox {
+  width: 270px;
+  height: 270px;
+  background: #fff;
+  padding: 0px;
+  line-height: 0px;
+}
+
+.gameBox.withGame .tttBox .xoBTN {
+  width: 86px;
+  height: 86px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 3px;
+  margin-top: 3px;
+  border-radius: 0px;
+  background-color: #000;
+  overflow: hidden;
+  border: 0px;
+  float: left;
+  font-size: 70px;
+  font-weight: 200;
+}
+
+.gameBox.withGame .gameBTN {
+  margin-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gameBox.withGame #playAgain {
+  display: none;
+}
+
+.gameBox.withoutGame {
+  padding: 60px;
+}
+
+.gameBox.withoutGame .gameBTN {
+  margin: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 40px;
+}
+/*# sourceMappingURL=custom.css.map */

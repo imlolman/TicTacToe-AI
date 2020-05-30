@@ -1,0 +1,87 @@
+.gameBox {
+    background: #000;
+    width: 700px;
+    height: 450px;
+    text-align: center;
+    color: #fff;
+
+    *{
+        user-select: none;
+    }
+
+    .rules {
+        padding: 50px;
+        font-size: 25px;
+    }
+
+    .gameBTN {
+        background: #eee;
+        color: #000;
+        text-transform: none;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        font-size: 30px;
+        height: 50px;
+        padding: initial;
+        font-weight: 600;
+    }
+
+    &.withGame {
+        display: flex;
+        display: none;
+        vertical-align: middle;
+        padding: 15px;
+        align-items: center;
+        text-align: left;
+        flex-direction: column;
+
+        .tttBox {
+            width: 270px;
+            height: 270px;
+            background: #fff;
+            padding: 0px;
+            line-height: 0px;
+
+            .xoBTN{
+                width: 86px;
+                height: 86px;
+                padding: 0px;
+                margin: 0px;
+                margin-left: 3px;
+                margin-top: 3px;
+                border-radius: 0px;
+                background-color: #000;
+                overflow: hidden;
+                border: 0px;
+                float: left;
+                font-size: 70px;
+                font-weight: 200;
+            }
+
+            
+        }
+        
+        .gameBTN{
+            margin-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        #playAgain{
+            display: none;
+        }
+    }
+
+    &.withoutGame {
+        // display: none;
+        padding: 60px;
+
+        .gameBTN {
+            margin: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 40px;
+        }
+    }
+}

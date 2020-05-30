@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><!--Just charset-->
+    <meta name="language" content="English"><!--for language-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><!--for viewport-->
+    <meta name="description" content="TicTacToe AI to Play With"><!--for description of website | upto 160 characters only-->
+    <meta name="keywords" content="TIcTacToe AI Search Algorithm"><!--for keywords-->
+    <meta name="theme-color" content="#1975d2" /><!--for android chrome topbar theme-->
+    <link rel="shortcut icon" href="assets/images/favicon-128.png"><!--fevicon -->
+    <meta property="og:type" content="tool | website" /><!--for telling about website-->
+    <meta property="og:title" content="TicTacToe AI" /><!--for fb title-->
+    <meta property="og:description" content="TicTacToe AI to Play With" /><!--for fb description-->
+    <meta property="og:image" content="LINK TO THE IMAGE FILE" /><!--for fb image-->
+    <meta property="og:url" content="https://imlolman.github.io/TicTacToe-AI" /><!--for fb permanent URL-->
+    <meta property="og:site_name" content="TicTacToe AI" /><!--for overall company name-->
+    <link rel="canonical" href="https://imlolman.github.io/TicTacToe-AI" /><!--for fixed current page url-->
+    <meta name="twitter:title" content="TicTacToe AI"><!--for twitter title-->
+    <meta name="twitter:description" content="TicTacToe AI to Play With"><!--for twitter description-->
+    <meta name="twitter:image" content="LINK TO IMAGE"><!--for twitter image-->
+    <meta name="twitter:creator" content="@satyam755755"><!--twitter username-->
+    <meta name="robots" content="index, follow"><!--for google crawling-->
+    <title>TicTacToe AI</title>
+    <style>
+        :root{
+            --color:210, 79%; /*the base color format(HSL) https://www.google.com/search?q=rgb+to+hex&oq=rgb+to+hex&aqs=chrome..69i57j0l6j69i60.3817j0j7&sourceid=chrome&ie=UTF-8 */
+            --l:46%; /*the initial lightness*/
+            --color-primary: hsl(var(--color),var(--l));
+            --color-primary-darker: hsl(var(--color),calc(var(--l) + 5%));
+            --color-primary-darkest: hsl(var(--color),calc(var(--l) + 10%));
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <script src="https://imlolman.github.io/js/controller.js"></script>
+    <link rel="stylesheet" href="assets/css/milligram.min.css">
+    <link href="assets/css/fa/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="manifest" href="manifest.json">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142979168-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+</head>
+<body>
+    <main class="wrapper">
+        <nav class="navigation nav-top">
+            <section class="container">
+                <a class="navigation-title" href="/">
+                    <i class="img fas fa-qrcode"></i>
+                    &nbsp;
+                    <h1 class="title">TicTacToe AI</h1>
+                </a>
+                <ul class="navigation-list float-right">
+                    <li class="navigation-item">
+                        <label class="switch">
+                            <input type="checkbox" id="darkmode" onclick='darkLightToggle()'>
+                            <span class="slider"></span>
+                          </label>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <section class="container">
+            <h3>TicTacToe AI 😎</h3><br>
+            <div class="row centerthisbox">
+              <div class="gameBox withoutGame">
+                <h1>Play Tic-Tac-Toe With AI</h1>
+                <button class="gameBTN" onclick="AIplaysAs('O')">Play as X</button>
+                <button class="gameBTN" onclick="AIplaysAs('X')">Play as O</button><br>
+                <button class="gameBTN" onclick="AIplaysAs(null)">Play as Both</button>
+            </div>
+            <div class="gameBox withGame">
+                <h1 id="headBox">Play as X</h1>
+                <div class="tttBox">
+                    <button class="xoBTN" id="x0x0"></button><button class="xoBTN" id="x0x1"></button><button class="xoBTN" id="x0x2"></button><button class="xoBTN" id="x1x0"></button><button class="xoBTN" id="x1x1"></button><button class="xoBTN" id="x1x2"></button><button class="xoBTN" id="x2x0"></button><button class="xoBTN" id="x2x1"></button><button class="xoBTN" id="x2x2"></button>
+                </div>
+                <button class="gameBTN" id="playAgain" onclick="runGame()">Play again</button>
+              </div>
+            </div>
+          
+        </section>
+        <footer class="footer">
+            <section class="container">
+                <p>Designed with ♥ by <a target="_blank" href="https://imlolman.github.io/" title="imlolman">imLolman</a>. Licensed under the <a target="_blank" href="https://github.com/milligram/milligram#license" title="MIT License">MIT License</a>.</p>
+            </section>
+        </footer>
+    </main>
+</body>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sketch.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then(() => {
+                console.info('Developer for Life Service Worker Registered');
+            }, err => console.error("Developer for Life Service Worker registration failed: ", err));
+
+        navigator.serviceWorker
+            .ready
+            .then(() => {
+                console.info('Developer for Life Service Worker Ready');
+            });
+    }
+    </script>
+</html>
